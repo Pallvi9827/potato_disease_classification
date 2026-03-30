@@ -1,5 +1,6 @@
 Training/PlantVillage/
+anaconda_projects/
+.ipynb_checkpoints/
 __pycache__/
 *.pyc
-.ipynb_checkpoints/
 .DS_Store
