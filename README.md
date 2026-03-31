@@ -88,7 +88,7 @@ Example response:
 ```json
 {
   "class": "Early Blight",
-  "confidence": 0.99
+  "confidence": 99.98
 }
 ```
 ## Project Status
