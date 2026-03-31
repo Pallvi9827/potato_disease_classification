@@ -1,4 +1,5 @@
 from fastapi import FastAPI, File, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 import numpy as np
 from io import BytesIO
@@ -7,6 +8,17 @@ import tensorflow as tf
 import os
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 BASE_DIR = os.path.dirname(os.path.dirname((os.path.abspath(__file__))))
 MODEL_PATH = os.path.join(BASE_DIR, 'models', '1.keras')                           
