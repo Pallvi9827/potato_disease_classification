@@ -24,7 +24,6 @@ function App() {
     });
 
     const data = await response.json();
-    alert(JSON.stringify(data));
     setResult(data);
   };
 
